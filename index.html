@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden-Hall</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="w-full h-screen flex justify-center Background-image relative" id="bg-image">
+        <!-- Header -->
+        <header
+            class="w-full 2xl:max-w-[88rem] lg:h-[16vh] 2xl:h-auto py-2 lg:py-0 2xl:py-6 px-3 sm:px-8 lg:px-16 flex justify-center items-center flex-wrap absolute bg-white lg:bg-transparent">
+            <div class="w-full flex justify-between items-center">
+                <div class="w-[37%] h-full lg:flex items-center hidden">
+                    <ul
+                        class="h-full px-4 py-[16px] flex justify-center gap-5 items-center rounded-lg text-white bg-blur-white">
+                        <li><a href="#About" data-key="about">About</a></li>
+                        <li><a href="#Academics" data-key="academics">Academics</a></li>
+                        <li><a href="#Admissions" data-key="admissions">Admissions</a></li>
+                        <li><a href="#WhyUs?" data-key="why_us">WhyUs?</a></li>
+                    </ul>
+                </div>
+                <div class="w-[30%] h-full flex lg:justify-center items-center overflow-hidden">
+                    <img src="assets/logo.png" class="w-full sm:w-[55%]">
+                </div>
+                <div class="w-[33%] flex justify-end gap-4 lg:gap-3 items-center">
+                    <button onclick="toggleLanguage()"
+                        class="px-4 py-2 border border-[#1D2A64] hover:bg-transparent duration-500 bg-[#1D2A64] hover:text-black text-white rounded-md">
+                        EN/FR
+                    </button>
+                    <i class='bx bx-menu-alt-right text-3xl sm:text-lg text-[#1D2A64] lg:hidden'
+                        onclick="ShowNavbar()"></i>
+                    <a href="#Admissions" data-key="contact"
+                        class="px-4 py-2 hidden lg:flex border border-[#1D2A64] hover:bg-transparent duration-500 bg-[#1D2A64] hover:text-black text-white rounded-md">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <ul class="w-full flex flex-col items-center text-lg gap-2 pb-3 nav-links lg:hidden" style="display: none;">
+                <li><a href="#About" onclick="ShowNavbar()" data-key="about">About</a></li>
+                <li><a href="#Academics" onclick="ShowNavbar()" data-key="academics">Academics</a></li>
+                <li><a href="#Admissions" onclick="ShowNavbar()" data-key="admissions">Admissions</a></li>
+                <li><a href="#WhyUs?" onclick="ShowNavbar()" data-key="why_us">Why Us?</a></li>
+                <li
+                    class="px-4 py-2 mt-2 border border-[#1D2A64] hover:bg-transparent duration-500 bg-[#1D2A64] hover:text-black text-white rounded-md">
+                    <a href="#Contact" onclick="ShowNavbar()" data-key="contact">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <!-- Hero -->
+        <div class="w-full h-full flex justify-center bg-blur">
+            <div class="w-full 2xl:max-w-[88rem] h-full flex items-center overflow-hidden px-7 lg:px-16 ">
+                <div
+                    class="w-full lg:w-4/6 2xl:w-[65%] flex flex-col items-center lg:items-start gap-10 Text-Animation">
+                    <div
+                        class="flex flex-col items-center lg:items-start gap-4 text-center lg:text-start text-white lg:mt-20">
+                        <h1 class="lg:w-[98%] text-4xl xl:text-6xl" data-key="hero_title">
+                            Garden Hall ,Your Child’s Path to Academic Excellence
+                        </h1>
+                        <p class="sm:w-4/6 lg:w-5/6 2xl:w-4/6 text-center lg:text-start" data-key="hero_description">
+                            Providing an English-speaking environment with high-quality teaching delivered by
+                            experienced British educators.
+                        </p>
+                    </div>
+                    <a href="#Contact"
+                        class='pl-[12px] pr-[6.5px] py-[7px] rounded-lg flex items-center gap-3 duration-500 hover:bg-white hover:text-black text-white bg-[#1D2A64]'>
+                        <span data-key="explore_more">Start Your Journey Today</span>
+                        <i class='bx bx-right-arrow-alt text-[22px] p-[5.8px] rounded-md text-white bg-[#FF9F00]'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="w-full h-full flex justify-center mt-8 lg:mt-10" id="About">
+        <div
+            class="w-full 2xl:max-w-[90rem] h-full lg:px-10 xl:px-20 lg:py-20 flex flex-wrap lg:flex-nowrap gap-10 lg:gap-5 xl:gap-0">
+            <div class="w-full lg:w-1/2 h-full flex flex-col gap-6">
+                <div
+                    class="w-full h-2/6 flex flex-col justify-center items-center lg:items-start gap-3 text-center lg:text-start">
+                    <div class="w-full flex flex-col items-center lg:items-start gap-3">
+                        <div class="flex items-center gap-3">
+                            <h1 class="text-[#1D2A64] text-xl" data-key="about_title">About Us</h1>
+                            <div class="px-5 h-[0.5vh] bg-[#FF9F00] rounded-full"></div>
+                        </div>
+                        <h1 class="lg:w-[90%] text-[40px] lg:text-5xl font-[700] leading-10 lg:leading-[55px]"
+                            data-key="about_subtitle">
+                            Founded on a vision of cultivating young minds with care
+                        </h1>
+                    </div>
+                    <p class="lg:w-5/6 text-[16px] text-gray-600 font-[500]" data-key="about_paragraph_1">
+                        Garden Hall started with a small group of passionate educators who wanted to reimagine
+                        education. Our founders believed that a school
+                        should be more than a place to learn it should be a second home where children feel valued and
+                        supported.
+                    </p>
+                    <p class="lg:w-5/6 text-[16px] text-gray-600 font-[500]" data-key="about_paragraph_2">
+                        Over the years, we’ve grown into a vibrant community of educators, students, and families who
+                        share a common goal: to inspire a love of learning and nurture the unique potential of every
+                        child.
+                    </p>
+                </div>
+                <div class="w-full lg:w-[70%] flex flex-col gap-3 lg:gap-0 xl:gap-3" data-key="about_features">
+                    <h1 class="text-lg" data-key="about_title_feature_1">Our Mission : </h1>
+                    <div class="flex flex-col gap-3 lg:gap-0 xl:gap-3 text-[15px]">
+                        <div class="flex items-center gap-2">
+                            <i class='bx bx-universal-access text-[22px]'></i>
+                            <p data-key="about_feature_1">To provide a world-class education that balances academic
+                                excellence with emotional and
+                                social growth.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class='bx bx-universal-access text-[22px]'></i>
+                            <p data-key="about_feature_2">To empower students with the skills they need to succeed in an
+                                ever-changing world.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class='bx bx-universal-access text-[22px]'></i>
+                            <p data-key="about_feature_3">To create a safe, inclusive environment where every child
+                                feels
+                                they belong.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-2 lg:px-0">
+                <div class="w-full h-[40vh] lg:h-full flex justify-between">
+                    <div
+                        class="w-[25%] h-full flex flex-col items-center justify-center text-center text-white rounded-xl bg-[#1D2A64]">
+                        <i class='bx bxs-graduation text-7xl text-[#FF9F00]' data-key="about_icon"></i>
+                        <h1 class="xl:text-2xl" data-key="about_icon_title">Happy strudent</h1>
+                    </div>
+                    <div class="w-[72%] h-full rounded-xl Background-image" id="bg-about"
+                        data-key="about_background_image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics -->
+    <section class="w-full flex justify-center my-10" id="Academics">
+        <div class="w-full 2xl:max-w-[88rem] h-full flex flex-col gap-14 lg:px-10 xl:px-20">
+            <div class="w-full flex flex-col items-center lg:items-start text-center lg:text-start gap-3">
+                <div class="flex items-center gap-3">
+                    <h1 class="text-[#1D2A64] text-xl" data-key="academics_title">Academics</h1>
+                    <div class="px-5 h-[0.5vh] bg-[#FF9F00] rounded-full"></div>
+                </div>
+                <h1 class="lg:w-[60%] text-[40px] lg:text-5xl font-[700] leading-10 lg:leading-[55px]"
+                    data-key="academics_subtitle">
+                    We cater to students at every stage of their educational journey
+                </h1>
+            </div>
+            <div
+                class="w-full lg:h-[55vh] 2xl:max-h-96 flex justify-between items-center flex-wrap gap-8 sm:gap-4 lg:gap-0 px-4 lg:px-0">
+                <div class="w-full sm:w-[48%] lg:w-[23%] h-[30vh] lg:h-full flex rounded-xl relative card-academics cursor-pointer Background-image"
+                    style="background-image: url(https://cafc.ma/wp-content/uploads/2022/09/garderie.jpg.webp);">
+                    <div class="w-full h-full flex justify-center items-end pb-5 duration-300">
+                        <h1 class="text-xl px-5 py-1 rounded-lg text-[#FF9F00] bg-[#1D2A64]"
+                            data-key="academics_title_cards_1">Creche</h1>
+                    </div>
+                    <div
+                        class="w-full h-full flex flex-col text-center gap-2 justify-center items-center absolute duration-300 bg-[#0000009a] rounded-xl">
+                        <h1 class="text-2xl text-[#FF9F00]" data-key="academics_title_cards_1">Creche</h1>
+                        <p class="w-5/6 text-white" data-key="academics_content_cards_1">
+                            Laying the foundation for a lifetime of learning
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full sm:w-[48%] lg:w-[23%] h-[30vh] lg:h-full flex rounded-xl relative card-academics cursor-pointer Background-image"
+                    style="background-image: url(https://www.aragon.merton.sch.uk/_site/data/files/images/slideshow/0B967974FE3A1421D49DE90FAC453C23.jpg);">
+                    <div class="w-full h-full flex justify-center items-end pb-5 duration-300">
+                        <h1 class="text-xl px-5 py-1 rounded-lg text-[#FF9F00] bg-[#1D2A64]"
+                            data-key="academics_title_cards_2">Primary</h1>
+                    </div>
+                    <div
+                        class="w-full h-full flex flex-col text-center gap-2 justify-center items-center absolute duration-300 bg-[#0000009a] rounded-xl">
+                        <h1 class="text-2xl text-[#FF9F00]" data-key="academics_title_cards_2">Primary</h1>
+                        <p class="w-5/6 text-white" data-key="academics_content_cards_2">
+                            Building essential skills through engaging and interactive lessons.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full sm:w-[48%] lg:w-[23%] h-[30vh] lg:h-full flex rounded-xl relative card-academics cursor-pointer Background-image"
+                    style="background-image: url(https://www.richmond.gov.uk/media/11186/secondary_schools.jpg);">
+                    <div class="w-full h-full flex justify-center items-end pb-5 duration-300">
+                        <h1 class="text-xl px-5 py-1 rounded-lg text-[#FF9F00] bg-[#1D2A64]"
+                            data-key="academics_title_cards_3">Secondary</h1>
+                    </div>
+                    <div
+                        class="w-full h-full flex flex-col text-center gap-2 justify-center items-center absolute duration-300 bg-[#0000009a] rounded-xl">
+                        <h1 class="text-2xl text-[#FF9F00]" data-key="academics_title_cards_3">Secondary</h1>
+                        <p class="w-5/6 text-white" data-key="academics_content_cards_3">
+                            Preparing students for the challenges of advanced learning.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full sm:w-[48%] lg:w-[23%] h-[30vh] lg:h-full flex rounded-xl relative card-academics cursor-pointer Background-image"
+                    style="background-image: url(https://media.istockphoto.com/id/1500076821/photo/happy-black-teenage-girl-in-high-school-hallway-looking-at-camera.jpg?s=612x612&w=0&k=20&c=Kc1x5IRZz7dqtUNt8k3zFB6ZKJz4CIiT-tbB0FFmAww=);">
+                    <div class="w-full h-full flex justify-center items-end pb-5 duration-300">
+                        <h1 class="text-xl px-5 py-1 rounded-lg text-[#FF9F00] bg-[#1D2A64]"
+                            data-key="academics_title_cards_4">High School</h1>
+                    </div>
+                    <div
+                        class="w-full h-full flex flex-col text-center gap-2 justify-center items-center absolute duration-300 bg-[#0000009a] rounded-xl">
+                        <h1 class="text-2xl text-[#FF9F00]" data-key="academics_title_cards_4">High School</h1>
+                        <p class="w-5/6 text-white" data-key="academics_content_cards_4">
+                            Guiding students toward academic and personal excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="w-full xl:h-[80vh] 2xl:max-h-[1000px] mt-20 Background-image" id="bg-activities">
+        <div class="w-full h-full flex justify-center items-center text-white bg-[#0000005a]">
+            <div
+                class="w-[90%] px-2 lg:px-0 flex flex-col justify-center items-center text-center lg:text-start gap-10 lg:gap-10 py-14 xl:py-14">
+                <h1 class="text-4xl" data-key="activities_title_1">
+                    Our Facilities and Programs
+                </h1>
+                <div
+                    class="w-full 2xl:max-w-[1000px] h-full flex justify-between items-center gap-5 lg:gap-2 flex-wrap">
+                    <div
+                        class="sm:w-[48%] md:w-[45%] lg:w-[48%] text-center p-6 rounded-xl duration-500 cursor-pointer text-black bg-white">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl text-[#1D2A64]" data-key="activities_title_cards_1">World-Class Campus
+                            </h1>
+                            <p class="text-sm" data-key="activities_content_cards_1">
+                                Our state-of-the-art campus is designed to inspire and engage students of all ages. From
+                                modern science labs to a fully equipped art studio, every corner of Garden Hall
+                                encourages exploration and creativity.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="sm:w-[48%] md:w-[45%] lg:w-[48%] text-center p-6 rounded-xl duration-500 cursor-pointer  text-black bg-white">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl text-[#1D2A64]" data-key="activities_title_cards_2">Cutting Technology
+                            </h1>
+                            <p class="text-sm" data-key="activities_content_cards_2">
+                                Technology plays a vital role in our classrooms. With interactive learning tools and
+                                digital resources, we equip students with the skills they need for the future.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="sm:w-[48%] md:w-[45%] lg:w-[48%] text-center p-6 rounded-xl duration-500 cursor-pointer  text-black bg-white">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl text-[#1D2A64]" data-key="activities_title_cards_3">A Love for Nature
+                            </h1>
+                            <p class="text-sm" data-key="activities_content_cards_3">
+                                As our name suggests, we’re passionate about connecting children with nature. Our campus
+                                features lush gardens, outdoor learning spaces, and eco-friendly initiatives to teach
+                                students the value of sustainability.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="sm:w-[48%] md:w-[45%] lg:w-[48%] text-center p-6 rounded-xl duration-500 cursor-pointer  text-black bg-white">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl text-[#1D2A64]" data-key="activities_title_cards_4">Beyond the Classroom
+                            </h1>
+                            <p class="text-sm" data-key="activities_content_cards_4">
+                                Our extracurricular programs are just as important as our academics. From robotics and
+                                drama to music and sports, there’s something for every student to discover and enjoy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions -->
+    <section class="w-full h-full flex justify-center mt-8 lg:mt-10" id="Admissions">
+        <div
+            class="w-full 2xl:max-w-[90rem] h-full lg:h-auto flex items-center flex-wrap gap-10 lg:gap-0 px-5 lg:px-10 xl:px-16 lg:py-20">
+            <div class="w-full lg:w-[49%] h-full flex flex-col text-center lg:text-start gap-3">
+                <div class="flex flex-col items-center lg:items-start gap-5">
+                    <div class="flex items-center gap-3">
+                        <h1 class="text-[#1D2A64] text-xl" data-key="admissions_title">Admissions</h1>
+                        <div class="px-5 h-[0.5vh] bg-[#FF9F00] rounded-full"></div>
+                    </div>
+                    <h1 class="text-4xl" data-key="admissions_process_title">Admissions Process</h1>
+                    <p class="w-5/6 lg:w-4/6 text-gray-700" data-key="admissions_process_description">
+                        We aim to make the admissions process as seamless and transparent as possible. Here’s how it
+                        works:
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:flex-wrap gap-4">
+                    <div class="lg:w-[48%] flex flex-col gap-2">
+                        <div class="flex justify-center lg:justify-start items-center gap-2">
+                            <i class='bx bxs-star'></i>
+                            <h1 class="text-xl" data-key="admissions_step1_title">Discover Garden Hall</h1>
+                        </div>
+                        <div class="lg:w-5/6 xl:w-full pl-6 flex flex-col gap-3 text-sm text-gray-700">
+                            <p data-key="admissions_step1_description1">
+                                Schedule a visit to see our campus, meet our team, and experience our classrooms in
+                                action.
+                            </p>
+                            <p data-key="admissions_step1_description2">
+                                Join our Open House events to meet current families and learn about our programs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-[48%] flex flex-col gap-2">
+                        <div class="flex justify-center lg:justify-start items-center gap-2">
+                            <i class='bx bxs-star'></i>
+                            <h1 class="text-xl" data-key="admissions_step2_title">Submit Your Application</h1>
+                        </div>
+                        <div class="lg:w-5/6 xl:w-full pl-6 flex flex-col gap-3 text-sm text-gray-700">
+                            <p data-key="admissions_step2_description1">
+                                Complete our online application form. Don’t worry it’s simple and easy!
+                            </p>
+                            <p data-key="admissions_step2_description2">
+                                Have questions? Our friendly admissions team is here to guide you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-[48%] flex flex-col gap-2">
+                        <div class="flex justify-center lg:justify-start items-center gap-2">
+                            <i class='bx bxs-star'></i>
+                            <h1 class="text-xl" data-key="admissions_step3_title">Assessment & Interview</h1>
+                        </div>
+                        <div class="lg:w-5/6 xl:w-full pl-6 flex flex-col gap-3 text-sm text-gray-700">
+                            <p data-key="admissions_step3_description1">
+                                We’ll invite your child for a relaxed assessment and interview to understand their
+                                strengths and learning style.
+                            </p>
+                            <p data-key="admissions_step3_description2">
+                                This isn’t about “passing” or “failing” it’s about building a partnership to help your
+                                child succeed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-[45%] flex flex-col gap-2">
+                        <div class="flex justify-center lg:justify-start items-center gap-2">
+                            <i class='bx bxs-star'></i>
+                            <h1 class="text-xl" data-key="admissions_step4_title">Enrollment</h1>
+                        </div>
+                        <div class="pl-6 flex flex-col gap-3 text-sm text-gray-700">
+                            <p data-key="admissions_step4_description1">
+                                Once your application is approved, we’ll walk you through the enrollment process step by
+                                step.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 h-[50vh] lg:h-full Background-image rounded-2xl"
+                style="background-image: url('https://allonehealth.com/wp-content/uploads/2022/07/iStock-1358014313-scaled-1.jpg');">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="w-full flex justify-center mt-20 lg:mt-5" id="WhyUs?">
+        <div
+            class="w-full 2xl:max-w-[88rem] h-full flex justify-center flex-wrap gap-10 lg:gap-20 px-5 lg:px-10 xl:px-20 lg:py-20">
+            <div class="w-full text-center">
+                <h1 class="text-5xl" data-key="whyus_title_1">
+                    Why Choose
+                    <span class="text-[#FF9F00]" data-key="whyus_title_2">
+                        Garden Hall?</span>
+                </h1>
+            </div>
+            <div class="w-full flex justify-between items-center flex-wrap lg:flex-nowrap gap-6">
+                <!-- Card-1 -->
+                <div
+                    class="w-full sm:w-[48%] lg:w-[32%] p-6 flex flex-col gap-6 rounded-xl duration-500 cursor-pointer text-white bg-[#1D2A64]">
+                    <div class="w-[21%]">
+                        <img src="assets/Experience.png" class="Picture" />
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-3xl" data-key="whyus_title_cards_1">Our Approach to Education</h1>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2">
+                                <h1 data-key="whyus_title_cards_1_1">Teacher’s Perspective :</h1>
+                                <p data-key="whyus_content_cards_1_1" class="text-xs">
+                                    We offer a holistic education that combines rigorous academics with experiential
+                                    learning. Our curriculum emphasizes critical thinking, creativity, and
+                                    collaboration, preparing students for success in school and beyond.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h1 data-key="whyus_title_cards_1_2">Parent’s Perspective :</h1>
+                                <p data-key="whyus_content_cards_1_2" class="text-xs">
+                                    At Garden Hall, your child won’t just learn facts and figures—they’ll discover their
+                                    passions, build lifelong friendships, and develop the confidence to chase their
+                                    dreams.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-2 -->
+                <div
+                    class="w-full sm:w-[48%] lg:w-[32%] p-6 flex flex-col gap-6 rounded-xl duration-500 cursor-pointer text-white bg-[#1D2A64]">
+                    <div class="w-[21%]">
+                        <img src="assets/Unique.png" class="Picture"/>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-3xl" data-key="whyus_title_cards_2">A Focus on Individual Growth</h1>
+                        <div class="flex flex-col gap-4">
+                            <h1 data-key="whyus_title_cards_2_1">We understand that every child is unique. That’s why we
+                                offer:</h1>
+                            <div class="flex flex-col gap-3 text-xs">
+                                <p data-key="whyus_content_cards_2_1">Personalized learning plans tailored to your
+                                    child’s strengths and challenges.</p>
+                                <p data-key="whyus_content_cards_2_2">A low student-to-teacher ratio, ensuring
+                                    individualized attention.</p>
+                                <p data-key="whyus_content_cards_2_3">Regular progress updates and parent-teacher
+                                    collaboration to keep you informed every step of the way.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-3 -->
+                <div
+                    class="w-full sm:w-[48%] lg:w-[32%] p-6 flex flex-col gap-6 rounded-xl duration-500 cursor-pointer text-white bg-[#1D2A64]">
+                    <div class="w-[21%]">
+                        <img src="assets/years.png" class="Picture" />
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-3xl" data-key="whyus_title_cards_3">Our Vibrant Community</h1>
+                        <div class="flex flex-col gap-4">
+                            <h1 data-key="whyus_title_cards_3_1">Education isn’t just about academics it’s about
+                                relationships. At Garden Hall, we pride ourselves on fostering a sense of belonging for
+                                every family.</h1>
+                            <div class="flex flex-col gap-3 text-xs">
+                                <p data-key="whyus_content_cards_3_1">For Parents: Join our active Parent Association
+                                    and connect with other families.</p>
+                                <p data-key="whyus_content_cards_3_2">For Students: Explore diverse extracurriculars,
+                                    from arts and sports to leadership opportunities.</p>
+                                <p data-key="whyus_content_cards_3_3">For Everyone: Celebrate together at our annual
+                                    events like Cultural Fest, Science Fair, and Family Day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="w-full flex justify-center mt-8 lg:mt-10" id="Contact">
+        <div class="w-full 2xl:max-w-[88rem] h-full flex flex-wrap gap-10 lg:gap-0 px-5 lg:px-10 xl:px-20 lg:py-20">
+            <div class="w-full lg:w-1/2 h-full flex flex-col text-center lg:text-start gap-10">
+                <div class="flex flex-col items-center lg:items-start gap-5">
+                    <div class="flex items-center gap-3">
+                        <h1 class="text-[#1D2A64] text-xl" data-key="contact_title">Contact</h1>
+                        <div class="px-5 h-[0.5vh] bg-[#FF9F00] rounded-full"></div>
+                    </div>
+                    <h1 class="text-4xl" data-key="contact_heading">
+                        Join Our Garden Hall Family
+                    </h1>
+                    <p class="w-5/6 text-gray-500" data-key="contact_description">
+                        We know that choosing a school is about more than test scores and rankings it’s about finding a
+                        place where your child feels inspired, supported, and celebrated.
+                    </p>
+                </div>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-3 text-[18px]">
+                        <i class='bx bxs-phone-call text-[20px] p-2 bg-[#FF9F00] text-[#1D2A64] rounded-full'></i>
+                        <h1>05-12-34-56-78</h1>
+                    </li>
+                    <li class="flex items-center gap-3 text-[18px]">
+                        <i class='bx bxs-envelope text-[20px] p-2 bg-[#FF9F00] text-[#1D2A64] rounded-full'></i>
+                        <h1>GardenHall@gmail.com</h1>
+                    </li>
+                    <li class="flex items-center gap-3 text-[18px]">
+                        <i class='bx bxl-whatsapp text-[20px] p-2 bg-[#FF9F00] text-[#1D2A64] rounded-full'></i>
+                        <h1>06-12-34-56-78</h1>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="w-full lg:w-[45%] bg-[#1D2A64] Background-image text-white rounded-2xl p-8 px-5 lg:px-10 flex flex-col gap-5">
+                <h1 class="text-lg" data-key="contact_form_heading">Please fill in the information below</h1>
+                <form id="contact-form" class="flex flex-col gap-4" onsubmit="SendEmail(event)" data-key="contact-form">
+                    <div class="flex flex-col gap-2">
+                        <label data-key="first_name">First Name :</label>
+                        <input type="text" id="first_name" class="p-2 px-4 rounded-md" required>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label data-key="last_name">Last Name :</label>
+                        <input type="text" id="last_name" class="p-2 px-4 rounded-md" required>
+                    </div>
+                    <div class="flex flex-col gap-2" data-key="email_field">
+                        <label data-key="email">Email :</label>
+                        <input type="email" id="email" class="p-2 px-4 rounded-md" required>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label data-key="phone">Phone Number :</label>
+                        <input type="tel" id="phone" class="p-2 px-4 rounded-md" required>
+                    </div>
+                    <input type="submit" value="Send Information"
+                        class="w-full py-3 text-lg rounded-md bg-[#FF9F00] text-white cursor-pointer"
+                        data-key="submit_button" />
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                    <script type="text/javascript">
+                        emailjs.init("lJuelerPjZ41eBJh0");
+                    </script>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full h-full flex justify-center flex-wrap mt-10 lg:mt-0 text-white bg-black">
+        <div class="w-full 2xl:max-w-[1600px] h-full flex flex-wrap px-5 lg:px-10 xl:px-28 py-8">
+            <div
+                class="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-start gap-2 px-4 py-6">
+                <div class="w-[60%] overflow-hidden flex justify-center lg:justify-start">
+                    <img src="assets/logo.png" class="w-[60%] sm:w-[24%]">
+                </div>
+                <h1 class="text-xl">Garden Hall</h1>
+                <p class="w-4/6 lg:w-1/2 text-sm">
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+            </div>
+            <div class="w-full lg:w-[55%] flex flex-col items-center lg:items-end gap-10 px-8 py-10">
+                <div class="flex justify-end gap-12">
+                    <div class="flex flex-col gap-4">
+                        <h1 class="text-lg">Company</h1>
+                        <ul class="text-gray-400 flex flex-col gap-2 text-[15px]">
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Academics">Academics</a></li>
+                            <li><a href="#Admissions">Admissions</a></li>
+                            <li><a href="#WhyUs?">WhyUs?</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h1 class="text-lg">Resources</h1>
+                        <ul class="text-gray-400 flex flex-col gap-2 text-[15px]">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Popers</a></li>
+                            <li><a href="#">Press Conferences</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h1 class="text-lg">Legal</h1>
+                        <ul class="text-gray-400 flex flex-col gap-2 text-[15px]">
+                            <li><a href="#About">Terms of Services</a></li>
+                            <li><a href="#Academics">Privacy Policy</a></li>
+                            <li><a href="#Admissions">Cookies Policy</a></li>
+                            <li><a href="#WhyUs?">Data Processing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 text-lg">
+                    <i class='bx bxl-instagram p-[9px] rounded-full text-white bg-[#1D2A64]'></i>
+                    <i class='bx bxl-twitter p-[9px] rounded-full text-white bg-[#1D2A64]'></i>
+                    <i class='bx bxl-facebook p-[9px] rounded-full text-white bg-[#1D2A64]'></i>
+                    <i class='bx bxl-linkedin-square p-[9px] rounded-full text-white bg-[#1D2A64]'></i>
+                </div>
+                <button onclick="toggleLanguage()" class="px-4 py-2 bg-[#1D2A64] text-white rounded-md">
+                    EN/FR
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
